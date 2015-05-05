@@ -7,45 +7,61 @@ var express = require('express'),
         host: 'localhost',
         user: 'root',
         password: 'nbuser',
-        database: 'node'     
+        database: 'node'
     }),
     notes = [];
 
 
-app.get('/', function(req, res){
-  res.sendFile(__dirname + '/index.html');
+app.get('/', function(req, res) {
+    res.sendFile(__dirname + '/index.html');
 });
-app.use('/bower_components',  express.static(__dirname + '/bower_components'));
+app.use('/bower_components', express.static(__dirname + '/bower_components'));
 app.use(express.static(__dirname + '/public'));
 
-connection.connect(function(err){
-    if(err){
-        console.error('error connecting to database:'+err.stack)
+connection.connect(function(err) {
+    if (err) {
+        console.error('error connecting to database:' + err.stack)
     }
-    
-    console.log('connecting as id '+connection.threadID);
+
+    console.log('connecting as id ' + connection.threadID);
 });
 
 
-io.on('connection', function(socket){
-  socket.on('chat message', function(msg){
-    io.emit('chat message', msg)
-//    dbconnection.query('INSERT INTO notes (note) VALUES (?)',msg)
-    connection.query('insert into notes (note) values (?)', msg)
-    connection.query('select * from notes', function(err, rows, fields){
-        console.log('did a query')
-        if(err)
-            console.error('error while performing query '+err.stack);
-        console.log('The records are as follows \n')
-        for(var i=0; i<rows.length; i++)
-            console.log(rows[i].note)
+io.on('connection', function(socket) {
+    socket.on('chat message', function(msg) {
+        io.emit('chat message', msg)
+        //    dbconnection.query('INSERT INTO notes (note) VALUES (?)',msg)
+        connection.query('insert into notes (note) values (?)', msg)
+//        connection.query('select * from notes', function(err, rows, fields) {
+//            console.log('did a query')
+//            if (err)
+//                console.error('error while performing query ' + err.stack);
+//            console.log('The records are as follows \n')
+//            for (var i = 0; i < rows.length; i++)
+//                console.log(rows[i].note)
+//        })
     })
     
-  })
+    socket.on('get data', function() {
+        console.log('I got your event from the front')
+        connection.query('select * from notes', function(err, rows, fields){
+            console.log('retrieved all the data from the notes table')
+            for(var i=0; i<rows.length; i++)
+                console.log(rows[i].note)
+            notes.push(rows)
+            console.log('Just pushed all the retrieved data into the array notes')
+            console.log('Data in my notes\n')
+            for(var i=0; i<notes.length; i++)
+                console.log(notes[i].note)
+            socket.emit('show data', rows)
+            console.log('pushed notes array to front end with the event "show data" ')
+        })
+        
+    })
 
-    
+
 });
 
-http.listen(3000, function(){
-  console.log('listening on *:3000');
+http.listen(3000, function() {
+    console.log('listening on *:3000');
 });

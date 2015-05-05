@@ -11,23 +11,34 @@
     <div class="container">
         <div class="row">
             <h1 class="page-header text-center">Load Management</h1>
-        </div>
-        <div class="row" style="height='200px'"></div>
-        <div class="row">
             <div class="col-md-6">
                 <ul id="messages"></ul>
             </div>
+            <!--display message-->
             <div class="col-md-6">
                 <form role="submit" action="">
                     <div class="form-group">
-                        <label for="pwd">Your Messge</label>
+                        <label for="pwd">Write Message</label>
                         <input type="text" class="form-control" id="m" autocomplete="off" />
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    </div><!--input things-->
+                    <button type="submit" class="btn btn-default">Submit</button><!--button-->
                 </form>
-
             </div>
+            <!--form input-->
         </div>
+        <!--for taking input and displaying data-->
+
+        <div class="row row-database">
+            <h3 class="text-center">Database</h3>
+            <div class="col-sm-8">
+                <ul id="display"></ul>
+            </div><!--generate a list and show database-->
+            <div class="col-sm-4">
+                <button id="show" class="btn btn-default">Show</button>
+            </div><!--keep my button here-->
+            
+        </div>
+        <!--row -->
     </div>
 
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
