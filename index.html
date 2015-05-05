@@ -9,15 +9,24 @@
 
 <body>
     <div class="container">
+       
+       <div class="row">
+           <h1 class="page-header text-center">Load Management</h1>
+       </div>
+       <div class="row" style="height='200px'"></div>
         <div class="row">
             <div class="col-md-6">
                 <ul id="messages"></ul>
             </div>
             <div class="col-md-6">
-                <form action="">
-                    <input id="m" autocomplete="off" />
-                    <button>Send</button>
+                <form role="submit" action="">
+                    <div class="form-group">
+                        <label for="pwd">Your Messge</label>
+                        <input type="text" class="form-control" id="m" autocomplete="off" />
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
                 </form>
+
             </div>
         </div>
     </div>
