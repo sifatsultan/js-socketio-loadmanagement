@@ -28,6 +28,8 @@ connection.connect(function(err) {
 
 
 io.on('connection', function(socket) {
+    console.log('got a device connected to me')
+    
     socket.on('chat message', function(msg) {
         io.emit('chat message', msg)
         //    dbconnection.query('INSERT INTO notes (note) VALUES (?)',msg)
@@ -69,6 +71,19 @@ io.on('connection', function(socket) {
         })        
     })
     
+    
+    socket.on('show numbers', function(data){
+        console.log('I just got some numbers from android phone')
+//        var jsonArray = JSON.parse(data)
+        for(var i=0;i<data.length; i++)
+            console.log(data[i]);
+    
+    })
+    
+    socket.on('progress', function(data){
+        console.log('progress: '+data)
+    })
+    
     /*
 CREATE TABLE pet (
     name VARCHAR(20), 
@@ -100,10 +115,10 @@ connection.query('select * from notes LIMIT 4,1', function(err, rows, fields){
     
     /*connection.query('insert into notes (note) values (?)', msg)*/
     socket.on('get numbers',function(){
-        connection.query(sqlCreateNumber)
+//        connection.query(sqlCreateNumber)
         console.log('btw I just created a new table called numbers')
-        for(var i=0; i<orderedNumbers.length; i++)
-            connection.query('insert into numbers (number) values(?)', orderedNumbers[i]);
+//        for(var i=0; i<orderedNumbers.length; i++)
+//            connection.query('insert into numbers (number) values(?)', orderedNumbers[i]);
         
         connection.query(sqlGetNumbers, function(err, rows, fields){
             socket.emit('show numbers', rows)
@@ -129,14 +144,20 @@ connection.query('select * from notes LIMIT 4,1', function(err, rows, fields){
                 socket.emit('display average', average)
                 console.log('threw an event to front end called "display average"')
             })
-        })
-
-        
-        
+        })        
+    })
+    
+    socket.on('add user', function(){
+        console.log('I got your android event to add a user')
+    })
+    
+    socket.on('disconnect', function(){
+        console.log('and it got disconnected')
     })
 
 
 });
+
 
 http.listen(3000, function() {
     console.log('listening on *:3000');

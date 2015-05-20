@@ -1,4 +1,5 @@
-var socket = io();
+var socket = io(),
+    smoothie = new SmoothieChart();
 
 $('form').submit(function() {
     socket.emit('chat message', $('#m').val());
@@ -60,4 +61,11 @@ socket.on('display average', function(data){
     $('#display').empty()
     $('#display').append($('<li class="list-group-item">').text(data))    
 })
+
+
+
+alert('My plot is about to start')
+smoothie.streamTo($('#mycanvas'))
+
+
 
