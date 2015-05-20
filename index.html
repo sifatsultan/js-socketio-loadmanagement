@@ -1,35 +1,64 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <title>Socket.IO chat</title>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
-    </style>
-  </head>
-  <body>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
-    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="page-header text-center">Load Management</h1>
+            <div class="col-md-6">
+                <ul id="messages"></ul>
+            </div>
+            <!--display message-->
+            <div class="col-md-6">
+                <form role="submit" action="">
+                    <div class="form-group">
+                        <label for="pwd">Write Message</label>
+                        <input type="text" class="form-control" id="m" autocomplete="off" />
+                    </div>
+                    <!--input things-->
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <!--button-->
+                </form>
+            </div>
+            <!--form input-->
+        </div>
+        <!--for taking input and displaying data-->
+
+        <div class="row row-database">
+            <h3 class="text-center page-header">Database</h3>
+            <div class="col-sm-6">
+                <ul id="display"></ul>
+            </div>
+            <!--generate a list and show database-->
+            <div class="col-sm-6">
+                <button id="show" class="btn btn-default">Show</button>
+                <button id="show5" class="btn btn-default">Show 5th Data</button>
+                <button id="numbers" class="btn btn-default">Show Numbers</button>
+                <button id="average" class="btn btn-default">Average</button>
+            </div>
+            <!--keep my button here-->
+        </div>
+        <!--row -->
+
+        <div class="row">
+            <h1 class="page-header text-center">Plot</h1>
+            <canvas id="mycanvas" width="400" height="100"></canvas>
+        </div>
+
+    </div>
+
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-    <script>
-      var socket = io();
-      $('form').submit(function(){
-        socket.emit('chat message', $('#m').val());
-        $('#m').val('');
-        return false;
-      });
-      socket.on('chat message', function(msg){
-        $('#messages').append($('<li>').text(msg));
-      });
-    </script>
-  </body>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <srcipt src="/smoothie.js"></srcipt>
+    <script src="/functions.js"></script>
+    
+
+</body>
+
 </html>

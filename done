@@ -1,0 +1,47 @@
+[33mcommit ffa60bb6299781c11c0691d20b618885cb0c5597[m
+Author: unknown <sifatsultan@gmail.com>
+Date:   Tue May 5 15:40:14 2015 +0400
+
+    retrieve data when requested, display to ul
+
+[33mcommit 6ff0a4c78bede4cb2b9c377db71eed62b8b0c7dc[m
+Author: unknown <sifatsultan@gmail.com>
+Date:   Tue May 5 11:02:48 2015 +0400
+
+    adds chat messages from users to database and then display
+
+[33mcommit 2d4e7eab7fc0699f6518ce317c6ab1750c80b727[m
+Author: unknown <sifatsultan@gmail.com>
+Date:   Tue May 5 09:33:55 2015 +0400
+
+    better screenshot
+
+[33mcommit dbe018a4146fc6c7d1ee3b208ad139a58580cbc3[m
+Author: unknown <sifatsultan@gmail.com>
+Date:   Tue May 5 09:21:11 2015 +0400
+
+    added design screenshots for readme in github
+
+[33mcommit 402dd9ad09090f7556f2e216bdcb5c0852714986[m
+Author: unknown <sifatsultan@gmail.com>
+Date:   Tue May 5 09:18:47 2015 +0400
+
+    bootstrap beauty
+
+[33mcommit 1a6a3346540f9b1952e5058670452906d6a4e6e9[m
+Author: unknown <sifatsultan@gmail.com>
+Date:   Tue May 5 08:28:50 2015 +0400
+
+    stylesheet successfully served static content
+
+[33mcommit b6b5e032bbcf5faff82b63565cd03aa3c0bcd53d[m
+Author: Sifat Sultan <sifatsultan@gmail.com>
+Date:   Tue May 5 08:05:15 2015 +0400
+
+    Update README.md
+
+[33mcommit 01ef2d7b5817d863f518a442ed44e492ce027816[m
+Author: unknown <sifatsultan@gmail.com>
+Date:   Tue May 5 08:02:32 2015 +0400
+
+    first commit
