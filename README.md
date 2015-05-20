@@ -10,10 +10,8 @@
 
 # Android 
 Android progressbar state is sent to socket server. Next step will be to save them. Unfortunately, couldnt plot the graph yet.
-<img src="https://github.com/sifatsultan/socketio-loadmanagement/blob/branch/design/3.png" />
-<img src="https://github.com/sifatsultan/socketio-loadmanagement/blob/branch/design/4.png" />
-
-
+<img width="150px" src="https://github.com/sifatsultan/socketio-loadmanagement/blob/master/design/3.png" />
+<img widht="150px" src="https://github.com/sifatsultan/socketio-loadmanagement/blob/master/design/4.png" />
 
 # Bootstrapified
 <img src="https://github.com/sifatsultan/socketio-loadmanagement/blob/branch/design/2.jpg" />
