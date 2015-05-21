@@ -1,9 +1,15 @@
 # Load Management Using SocketIO
 
-# Left
+# Objective
 - Connect Arduino to Server
 - Save Arduino Values in the database
 - Plot energy transactions over time, from database
+ 
+# Next
+- Save Android values to database with date and time
+- Be able to retrieve data with specific date
+- Be able to retrieve data with specific data and time
+
 
 # Achievements
 - Able to save numbers to database, retrieve them,  
