@@ -12,7 +12,24 @@
 
 
 # Achievements
-- Able to save numbers to database, retrieve them,  
+### May 20, 2015
+
+- added some screenshots
+- android progressbar state to server
+
+### May 12, 2015
+
+- create table number and display it
+
+### May 5, 2015
+
+- retrieve data when requested, display to ul
+- adds chat messages from users to database and then display
+- Well had to do the mac thing …
+- better screenshot
+- added design screenshots for readme in github
+- bootstrap beauty
+- stylesheet successfully served static content
 
 # Android 
 Android progressbar state is sent to socket server. Next step will be to save them. Unfortunately, couldnt plot the graph yet.
