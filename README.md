@@ -5,13 +5,19 @@
 - Save Arduino Values in the database
 - Plot energy transactions over time, from database
  
+
 # Next
+- Display graph and integrate the data to the graph
 - Save Android values to database with date and time
 - Be able to retrieve data with specific date
 - Be able to retrieve data with specific data and time
 
 
 # Achievements
+### June 6, 2015
+ - send manual time-stamped database as json to front end for generating graphs
+<img src="https://github.com/sifatsultan/js-socketio-loadmanagement/blob/master/design/6jun2.png?raw=true" width="500px"> 
+
 ### May 20, 2015
 
 - added some screenshots
