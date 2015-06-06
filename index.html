@@ -5,59 +5,38 @@
     <title>Socket.IO chat</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- amCharts javascript sources -->
+
+    <script type="text/javascript" src="http://cdn.amcharts.com/lib/3/amcharts.js"></script>
+    <script type="text/javascript" src="http://www.amcharts.com/lib/3/serial.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <div class="row">
-            <h1 class="page-header text-center">Load Management</h1>
-            <div class="col-md-6">
-                <ul id="messages"></ul>
-            </div>
-            <!--display message-->
-            <div class="col-md-6">
-                <form role="submit" action="">
-                    <div class="form-group">
-                        <label for="pwd">Write Message</label>
-                        <input type="text" class="form-control" id="m" autocomplete="off" />
-                    </div>
-                    <!--input things-->
-                    <button type="submit" class="btn btn-default">Submit</button>
-                    <!--button-->
-                </form>
-            </div>
-            <!--form input-->
-        </div>
-        <!--for taking input and displaying data-->
-
         <div class="row row-database">
-            <h3 class="text-center page-header">Database</h3>
+            <h1 class="text-center page-header">Chart Data</h1>
             <div class="col-sm-6">
-                <ul id="display"></ul>
+                <!--display chart-->
+                <div id="chartdiv" style="width: 100%; height: 340px;"></div>
             </div>
-            <!--generate a list and show database-->
+
+
             <div class="col-sm-6">
-                <button id="show" class="btn btn-default">Show</button>
-                <button id="show5" class="btn btn-default">Show 5th Data</button>
-                <button id="numbers" class="btn btn-default">Show Numbers</button>
-                <button id="average" class="btn btn-default">Average</button>
+                <button id="numbersRequest" class="btn btn-default">Get Numbers</button>
             </div>
-            <!--keep my button here-->
+            <!--button to request data-->
         </div>
         <!--row -->
-
-        <div class="row">
-            <h1 class="page-header text-center">Plot</h1>
-            <canvas id="mycanvas" width="400" height="100"></canvas>
-        </div>
 
     </div>
 
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-    <srcipt src="/smoothie.js"></srcipt>
+    <script src="/Charts.js"></script>
     <script src="/functions.js"></script>
-    
+    <!--<script src="Chart.js"></script>-->
+
+
 
 </body>
 
