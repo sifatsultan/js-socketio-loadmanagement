@@ -54,7 +54,7 @@ Android progressbar state is sent to socket server. Next step will be to save th
 ![Progress](https://raw.githubusercontent.com/sifatsultan/js-socketio-loadmanagement/master/design/4.png)
 
 # Bootstrapified
-![Bootstrap](https://raw.githubusercontent.com/sifatsultan/js-socketio-loadmanagement/master/design/1.png)
+![Bootstrap](https://raw.githubusercontent.com/sifatsultan/js-socketio-loadmanagement/branch/design/2.jpg)
 
 ## Credit
 I am building this app upon the  [Getting Started](http://socket.io/get-started/chat/) code from socketio.
