@@ -50,8 +50,8 @@
 # Android 
 Android progressbar state is sent to socket server. Next step will be to save them. Unfortunately, couldnt plot the graph yet.
 
-![img](https://raw.githubusercontent.com/sifatsultan/js-socketio-loadmanagement/blob/master/design/3.png)
-![img](https://raw.githubusercontent.com/sifatsultan/js-socketio-loadmanagement/blob/master/design/4.png)
+![img](https://raw.githubusercontent.com/sifatsultan/js-socketio-loadmanagement/master/design/3.png)
+![img](https://raw.githubusercontent.com/sifatsultan/js-socketio-loadmanagement/master/design/4.png)
 
 # Bootstrapified
 <img src="https://github.com/sifatsultan/socketio-loadmanagement/blob/branch/design/2.jpg" />
