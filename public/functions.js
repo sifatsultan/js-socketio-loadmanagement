@@ -1,39 +1,68 @@
 var socket = io();
+var chartData = [{
+    "category": "Sat",
+    "column-1": 8
+}, {
+    "category": "Sun",
+    "column-1": 6
+}, {
+    "category": "Mon",
+    "column-1": 2
+}, {
+    "category": "Tue",
+    "column-1": 1
+}, {
+    "category": "Wed",
+    "column-1": 2
+}, {
+    "category": "Thu",
+    "column-1": 3
+}, {
+    "category": "Fri",
+    "column-1": 6
+}]
 
-$('form').submit(function() {
-    socket.emit('chat message', $('#m').val());
-    $('#m').val('');
-    return false;
-})
-
-$('#submit').click(function() {
-    socket.emit('chat message', $('#msg').val());
-    $('#msg').val('');
-    return false;
-})
-
+var charConfig = {
+    "type": "serial",
+    "categoryField": "category",
+    "categoryAxis": {
+        "gridPosition": "start"
+    },
+    "trendLines": [],
+    "graphs": [{
+        "balloonText": "[[value]] Watts",
+        "bullet": "round",
+        "id": "AmGraph-1",
+        "title": "Power",
+        "valueField": "column-1"
+    }],
+    "guides": [],
+    "valueAxes": [{
+        "id": "ValueAxis-1",
+        "title": "Power Consumption"
+    }],
+    "allLabels": [],
+    "balloon": {},
+    "legend": {
+        "useGraphSettings": true
+    },
+    "titles": [{
+        "id": "Title-1",
+        "size": 15,
+        "text": "Load Trend"
+    }],
+    "dataProvider": chartData
+}
 
 $('#numbersRequest').click(function() {
     socket.emit('get graph data')
 })
 
+
 socket.on('graph data retrieved', function(data) {
-    alert(data)
-})
+    //    alert(data)
+    var jsonArray = JSON.parse(data)
+    //    alert(jsonArray[1].category)
 
-socket.on('show 5th data', function(data) {
-    $('#display').empty()
-    for (var i = 0; i < data.length; i++)
-        $('#display').append($('<li class="list-group-item">').text(data[i].note))
-})
-
-socket.on('show numbers', function(data) {
-    $('#display').empty()
-    for (var i = 0; i < data.length; i++)
-        $('#display').append($('<li class="list-group-item">').text(data[i].number))
-})
-
-socket.on('display average', function(data) {
-    $('#display').empty()
-    $('#display').append($('<li class="list-group-item">').text(data))
+    AmCharts.makeChart("chartdiv", charConfig);
 })

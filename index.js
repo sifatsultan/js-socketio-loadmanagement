@@ -8,8 +8,7 @@ var express = require('express'),
         user: 'root',
         password: 'nbuser',
         database: 'node'
-    }),
-    notes = [];
+    });
 
 
 app.get('/', function(req, res) {
