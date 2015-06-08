@@ -14,6 +14,10 @@
 
 
 # Achievements
+### June 7, 2015
+- tweaked amchart graph suggested by Yousuf for the load management trend
+<img src="https://github.com/sifatsultan/js-socketio-loadmanagement/blob/master/design/7jun2.png?raw=true" width="500px"> 
+
 ### June 6, 2015
  - send manual time-stamped database as json to front end for generating graphs
 <img src="https://github.com/sifatsultan/js-socketio-loadmanagement/blob/master/design/6jun1.png?raw=true" width="500px"> 
