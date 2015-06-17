@@ -14,6 +14,11 @@
 
 
 # Achievements
+
+### June 17, 2015
+- retrieved data dynamically from the database and displayed with proper weekd
+![Load Management Trend](https://raw.githubusercontent.com/sifatsultan/js-socketio-loadmanagement/master/design/17jun1.png)
+
 ### June 7, 2015
 - tweaked amchart graph suggested by Yousuf for the load management trend
 ![Load Management Trend](https://raw.githubusercontent.com/sifatsultan/js-socketio-loadmanagement/master/design/7jun1.png)
