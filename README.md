@@ -14,13 +14,18 @@
 
 
 # Achievements
+### June 7, 2015
+- tweaked amchart graph suggested by Yousuf for the load management trend
+![Load Management Trend](https://raw.githubusercontent.com/sifatsultan/js-socketio-loadmanagement/master/design/7jun1.png)
+
+
 ### June 6, 2015
  - send manual time-stamped database as json to front end for generating graphs
-<img src="https://github.com/sifatsultan/js-socketio-loadmanagement/blob/master/design/6jun1.png?raw=true" width="500px"> 
+ ![Console](https://raw.githubusercontent.com/sifatsultan/js-socketio-loadmanagement/master/design/6jun1.png)
 
 ***
 
-<img src="https://github.com/sifatsultan/js-socketio-loadmanagement/blob/master/design/6jun2.png?raw=true" width="500px">
+![Front End Console](https://raw.githubusercontent.com/sifatsultan/js-socketio-loadmanagement/master/design/6jun2.png)
 
 
 ### May 20, 2015
@@ -45,12 +50,11 @@
 # Android 
 Android progressbar state is sent to socket server. Next step will be to save them. Unfortunately, couldnt plot the graph yet.
 
-<img width="200pt" src="https://github.com/sifatsultan/socketio-loadmanagement/blob/master/design/3.png" />
-<img widht="200pt" src="https://github.com/sifatsultan/socketio-loadmanagement/blob/master/design/4.png" />
+![Android](https://raw.githubusercontent.com/sifatsultan/js-socketio-loadmanagement/master/design/3.png)
+![Progress](https://raw.githubusercontent.com/sifatsultan/js-socketio-loadmanagement/master/design/4.png)
 
 # Bootstrapified
-<img src="https://github.com/sifatsultan/socketio-loadmanagement/blob/branch/design/2.jpg" />
-
+![Bootstrap](https://raw.githubusercontent.com/sifatsultan/js-socketio-loadmanagement/branch/design/2.jpg)
 
 ## Credit
 I am building this app upon the  [Getting Started](http://socket.io/get-started/chat/) code from socketio.
